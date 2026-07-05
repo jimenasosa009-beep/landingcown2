@@ -3,287 +3,157 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lucky Crown</title>
+  <title>WhatsApp - Crown Best</title>
 
-  <!-- =========================
-       META PIXEL (PEGAR ID ACA)
-       Reemplazá YOUR_PIXEL_ID
-       ========================= -->
+  <!-- Meta Pixel -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-
-    // PEGAR TU PIXEL ID ACA
-    fbq('init', 'YOUR_PIXEL_ID');
-
-    // Evento PageView
-    fbq('track', 'PageView');
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1558442999029718'); fbq('track', 'PageView');
   </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
-  </noscript>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1558442999029718&ev=PageView&noscript=1"/></noscript>
 
-  <!-- Fuente -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Montserrat',sans-serif;
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Roboto',sans-serif;background:#0f0f0f;color:white;display:flex;justify-content:center;align-items:center;min-height:100vh;overflow-x:hidden;}
+    
+    .whatsapp-container{
+      width:100%; max-width:440px; background:#111; border:1px solid #333; border-radius:12px; overflow:hidden; box-shadow:0 0 30px rgba(0,0,0,0.8);
     }
 
-    body{
-      min-height:100vh;
-      background:
-        radial-gradient(circle at top, rgba(255,190,0,.18) 0%, rgba(0,0,0,0) 35%),
-        linear-gradient(180deg, #0a0a0a 0%, #050505 100%);
-      color:white;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      overflow-x:hidden;
+    /* Header WhatsApp */
+    .header{
+      background:#075e54; padding:12px 16px; display:flex; align-items:center; gap:12px; color:white;
+    }
+    .header img{width:32px; height:32px;}
+    .header h1{font-size:19px; font-weight:500;}
+
+    .nav{
+      background:#202020; padding:10px; display:flex; justify-content:space-between; font-size:14px; border-bottom:1px solid #333;
+    }
+    .nav a{color:#ddd; text-decoration:none; padding:6px 10px;}
+    .nav .active{color:#25d366; border-bottom:2px solid #25d366;}
+
+    /* Contenido principal */
+    .content{
+      padding:40px 20px 30px; text-align:center; background:#0f0f0f; min-height:420px;
     }
 
-    .container{
-      width:100%;
-      max-width:430px;
-      padding:30px 20px 40px;
-      text-align:center;
-      position:relative;
+    .logo-circle{
+      width:110px; height:110px; background:#000; border-radius:50%; margin:0 auto 20px; display:flex; align-items:center; justify-content:center; box-shadow:0 0 20px rgba(255,215,0,0.6);
+    }
+    .logo-circle img{width:80px;}
+
+    .title{color:white; font-size:28px; font-weight:700; margin-bottom:8px;}
+    .subtitle{color:#bbb; font-size:15px; margin-bottom:30px;}
+
+    /* Chat bubble */
+    .chat-bubble{
+      background:#202c33; color:white; padding:16px 20px; border-radius:18px; border-bottom-left-radius:4px; max-width:280px; margin:0 auto 40px; text-align:left; font-size:15.5px; line-height:1.4;
     }
 
-    .badge{
-      display:inline-block;
-      padding:10px 22px;
-      border:1px solid rgba(255,202,44,.45);
-      border-radius:40px;
-      color:#ffca2c;
-      font-size:14px;
-      font-weight:700;
-      letter-spacing:1px;
-      margin-bottom:28px;
-      background:rgba(255,202,44,.04);
-      box-shadow:0 0 15px rgba(255,202,44,.08);
+    /* Botones */
+    .btn-green{
+      background:#25d366; color:black; font-weight:700; font-size:17px; padding:16px; border-radius:999px; text-decoration:none; display:block; margin:14px auto; width:85%; max-width:300px; box-shadow:0 4px 12px rgba(37,211,102,0.4);
+    }
+    .btn-outline{
+      background:transparent; color:#ddd; border:1px solid #555; font-weight:500; padding:14px; border-radius:999px; text-decoration:none; display:block; margin:14px auto; width:85%; max-width:300px;
     }
 
-    .logo{
-      font-size:64px;
-      font-weight:900;
-      line-height:1;
-      letter-spacing:2px;
-      color:#ffca2c;
-      text-shadow:0 0 20px rgba(255,202,44,.12);
-    }
-
-    .sub{
-      margin-top:14px;
-      margin-bottom:36px;
-      color:#d8d8d8;
-      font-size:18px;
-      letter-spacing:4px;
-      font-weight:600;
-    }
-
-    .bonus{
-      border:2px solid rgba(255,202,44,.55);
-      border-radius:28px;
-      padding:28px 20px;
-      background:linear-gradient(180deg, rgba(255,202,44,.08), rgba(255,202,44,.03));
-      box-shadow:
-        0 0 30px rgba(255,202,44,.10),
-        inset 0 0 30px rgba(255,202,44,.03);
-      margin-bottom:26px;
-      position:relative;
-    }
-
-    .bonus small{
-      display:block;
-      color:#ffca2c;
-      font-size:14px;
-      font-weight:800;
-      letter-spacing:2px;
-      margin-bottom:10px;
-    }
-
-    .bonus h2{
-      font-size:64px;
-      line-height:1;
-      font-weight:900;
-      color:#ffca2c;
-      text-shadow:0 0 20px rgba(255,202,44,.12);
-    }
-
-    .bonus p{
-      margin-top:14px;
-      font-size:18px;
-      color:#e4e4e4;
-      font-weight:600;
-    }
-
-    .gift{
-      position:absolute;
-      right:22px;
-      top:18px;
-      font-size:34px;
-    }
-
-    .btn{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:12px;
-      width:100%;
-      padding:20px 24px;
-      margin-top:22px;
-      border-radius:999px;
-      text-decoration:none;
-      color:white;
-      font-size:22px;
-      font-weight:900;
-      background:#22d95c;
-      box-shadow:
-        0 0 18px rgba(34,217,92,.45),
-        0 0 36px rgba(34,217,92,.18);
-      transition:transform .15s ease, box-shadow .15s ease;
-    }
-
-    .btn:hover{
-      transform:translateY(-1px) scale(1.01);
-      box-shadow:
-        0 0 24px rgba(34,217,92,.55),
-        0 0 44px rgba(34,217,92,.22);
-    }
-
-    .info{
-      margin-top:12px;
-      font-size:14px;
-      color:#bdbdbd;
-    }
-
-    .features{
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      margin-top:44px;
-      text-align:left;
-    }
-
-    .item{
-      flex:1;
-      min-width:0;
-    }
-
-    .item h4{
-      color:#ffca2c;
-      font-size:14px;
-      font-weight:800;
-      margin-bottom:6px;
-    }
-
-    .item p{
-      color:#d0d0d0;
-      font-size:12px;
-      line-height:1.35;
+    .download-link{
+      color:#25d366; text-decoration:underline; font-size:14.5px; margin-top:20px; display:inline-flex; align-items:center; gap:6px;
     }
 
     .footer{
-      margin-top:38px;
-      color:#9a9a9a;
-      font-size:13px;
-      font-weight:600;
-    }
-
-    @media (max-width:480px){
-      .logo{
-        font-size:56px;
-      }
-
-      .bonus h2{
-        font-size:56px;
-      }
-
-      .btn{
-        font-size:20px;
-        padding:18px 20px;
-      }
-
-      .features{
-        gap:10px;
-      }
+      background:#1f1f1f; padding:12px; text-align:center; font-size:13px; color:#888;
     }
   </style>
 </head>
-
 <body>
 
-  <div class="container">
+  <div class="whatsapp-container">
 
-    <div class="badge">🟢 ATENCIÓN 24HS · ARGENTINA</div>
-
-    <div class="logo">LUCKY CROWN</div>
-
-    <div class="sub">ENTRETENIMIENTO ONLINE</div>
-
-    <div class="bonus">
-      <div class="gift">🎁</div>
-      <small>BONO DE BIENVENIDA</small>
-      <h2>50% EXTRA</h2>
-      <p>En tu primer depósito · Juegos originales</p>
+    <!-- Header estilo WhatsApp -->
+    <div class="header">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" alt="WhatsApp">
+      <h1>WhatsApp</h1>
     </div>
 
-    <!-- BOTÓN WHATSAPP 1 -->
-    <a class="btn"
-       href="https://wa.me/549XXXXXXXXXX"
-       target="_blank"
-       onclick="fbq('track', 'Contact');">
-      📲 CREÁ TU USUARIO GRATIS
-    </a>
-
-    <div class="info">
-      Sin costo · Registro en minutos · Bono inmediato
+    <!-- Navegación -->
+    <div class="nav">
+      <a href="#" class="active">Chats</a>
+      <a href="#">Estado</a>
+      <a href="#">Comunidades</a>
+      <a href="#">Llamadas</a>
     </div>
 
-    <!-- BOTÓN WHATSAPP 2 -->
-    <a class="btn"
-       href="https://wa.me/549XXXXXXXXXX"
-       target="_blank"
-       onclick="fbq('track', 'Contact');">
-      📲 REGISTRATE GRATIS AHORA
-    </a>
+    <div class="content">
 
-    <div class="features">
-      <div class="item">
-        <h4>🔒 SEGURO</h4>
-        <p>Plataforma 100% segura</p>
+      <!-- Logo ARES -->
+      <div class="logo-circle">
+        <img src="https://i.imgur.com/YourAresLogo.png" alt="ARES" onerror="this.src='https://via.placeholder.com/80/000/FFD700?text=ARES';">
       </div>
 
-      <div class="item">
-        <h4>⚡ RÁPIDO</h4>
-        <p>Depósitos y retiros al instante</p>
+      <div class="title">Crown Best</div>
+      <div class="subtitle">Lucky Crown</div>
+
+      <!-- Mensaje de chat -->
+      <div class="chat-bubble">
+        Hola! Vi la página de Lucky Crown y quiero crear mi usuario gratis para aprovechar el bonus del 50%.
       </div>
 
-      <div class="item">
-        <h4>🎧 SOPORTE 24HS</h4>
-        <p>Estamos para ayudarte</p>
-      </div>
+      <!-- Botones principales -->
+      <a href="#" class="btn-green" id="btn1">Abrir aplicación</a>
+      <a href="#" class="btn-outline" id="btn2">Continuar en WhatsApp Web</a>
+
+      <a href="#" class="download-link" id="btn3">
+        <span>📲</span> ¿No tienes la aplicación? Descárgala ahora
+      </a>
+
     </div>
 
     <div class="footer">
       +18 · Juega con responsabilidad
     </div>
-
   </div>
 
+  <script>
+    const contactos = [
+      { 
+        numero: "5491127872686", 
+        mensaje: "Hola! Vi la página de Lucky Crown y quiero crear mi usuario gratis para aprovechar el bono de bienvenida del 50%." 
+      },
+      { 
+        numero: "5491127802342", 
+        mensaje: "¡Buenas! Me interesa registrarme en Lucky Crown. ¿Me podés ayudar con el bono de primer depósito?" 
+      }
+    ];
+
+    let contactoActual = contactos[0];
+
+    function actualizarContacto() {
+      contactoActual = contactos[Math.floor(Math.random() * contactos.length)];
+    }
+
+    function abrirWhatsApp() {
+      const texto = encodeURIComponent(contactoActual.mensaje);
+      const url = `https://wa.me/${contactoActual.numero}?text=${texto}`;
+      window.open(url, '_blank');
+      fbq('track', 'Contact');
+    }
+
+    // Asignar eventos
+    document.getElementById('btn1').addEventListener('click', abrirWhatsApp);
+    document.getElementById('btn2').addEventListener('click', abrirWhatsApp);
+    document.getElementById('btn3').addEventListener('click', abrirWhatsApp);
+
+    actualizarContacto();
+    setInterval(actualizarContacto, 5 * 60 * 1000);
+  </script>
 </body>
 </html>

@@ -3,163 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GANAMOS .NET - Bono 50%</title>
+  <title>Lucky Crown</title>
 
   <!-- Meta Pixel -->
   <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    
-    fbq('init', '1558442999029718'); 
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1558442999029718');
     fbq('track', 'PageView');
   </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1558442999029718&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Arial', 'Helvetica', sans-serif;
-      background: #0a0a0a;
-      color: white;
-      min-height: 100vh;
-      text-align: center;
-      padding: 20px 15px;
-    }
-    .container { max-width: 420px; margin: 0 auto; }
-
-    .logo {
-      font-size: 42px;
-      font-weight: 900;
-      letter-spacing: 2px;
-      margin-bottom: 8px;
-    }
-    .logo span {
-      background: linear-gradient(90deg, #9c27b0, #e91e63);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .subtitle {
-      font-size: 14px;
-      color: #aaa;
-      letter-spacing: 3px;
-      margin-bottom: 40px;
-    }
-
-    .golden-ticket {
-      background: linear-gradient(135deg, #f1c40f, #ffd700);
-      color: #1a1a1a;
-      padding: 35px 20px;
-      border-radius: 18px;
-      margin: 30px auto;
-      box-shadow: 0 15px 35px rgba(241, 196, 15, 0.4);
-      position: relative;
-      border: 8px solid #000;
-      animation: pulse 2s infinite;
-    }
-
-    .ticket-title { font-size: 15px; font-weight: bold; letter-spacing: 2px; }
-    .bono { font-size: 52px; font-weight: 900; margin: 15px 0; }
-    .vip {
-      display: inline-block;
-      background: #1a1a1a;
-      color: #ffd700;
-      padding: 8px 25px;
-      border-radius: 30px;
-      font-weight: bold;
-      font-size: 18px;
-      margin-top: 10px;
-    }
-
-    .message {
-      font-size: 19px;
-      margin: 30px 0 25px;
-      line-height: 1.4;
-    }
-
-    .cta-button {
-      background: linear-gradient(90deg, #25d366, #20c557);
-      color: white;
-      font-size: 19px;
-      font-weight: 700;
-      padding: 18px 40px;
-      border-radius: 50px;
-      border: none;
-      width: 100%;
-      max-width: 340px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
-      cursor: pointer;
-      animation: pulse 2s infinite;
-    }
-
-    .footer {
-      margin-top: 50px;
-      font-size: 13px;
-      color: #666;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
+    body{min-height:100vh;background:radial-gradient(circle at top, rgba(255,190,0,.18) 0%, rgba(0,0,0,0) 35%), linear-gradient(180deg, #0a0a0a 0%, #050505 100%);color:white;display:flex;justify-content:center;align-items:center;overflow-x:hidden;}
+    .container{width:100%;max-width:430px;padding:30px 20px 40px;text-align:center;position:relative;}
+    .badge{display:inline-block;padding:10px 22px;border:1px solid rgba(255,202,44,.45);border-radius:40px;color:#ffca2c;font-size:14px;font-weight:700;letter-spacing:1px;margin-bottom:28px;background:rgba(255,202,44,.04);box-shadow:0 0 15px rgba(255,202,44,.08);}
+    .logo{font-size:64px;font-weight:900;line-height:1;letter-spacing:2px;color:#ffca2c;text-shadow:0 0 20px rgba(255,202,44,.12);}
+    .sub{margin-top:14px;margin-bottom:36px;color:#d8d8d8;font-size:18px;letter-spacing:4px;font-weight:600;}
+    .bonus{border:2px solid rgba(255,202,44,.55);border-radius:28px;padding:28px 20px;background:linear-gradient(180deg, rgba(255,202,44,.08), rgba(255,202,44,.03));box-shadow:0 0 30px rgba(255,202,44,.10), inset 0 0 30px rgba(255,202,44,.03);margin-bottom:26px;position:relative;}
+    .bonus small{display:block;color:#ffca2c;font-size:14px;font-weight:800;letter-spacing:2px;margin-bottom:10px;}
+    .bonus h2{font-size:64px;line-height:1;font-weight:900;color:#ffca2c;text-shadow:0 0 20px rgba(255,202,44,.12);}
+    .bonus p{margin-top:14px;font-size:18px;color:#e4e4e4;font-weight:600;}
+    .gift{position:absolute;right:22px;top:18px;font-size:34px;}
+    .btn{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;padding:20px 24px;margin-top:22px;border-radius:999px;text-decoration:none;color:white;font-size:22px;font-weight:900;background:#22d95c;box-shadow:0 0 18px rgba(34,217,92,.45), 0 0 36px rgba(34,217,92,.18);transition:transform .15s ease, box-shadow .15s ease;cursor: pointer;}
+    .btn:hover{transform:translateY(-1px) scale(1.01);box-shadow:0 0 24px rgba(34,217,92,.55), 0 0 44px rgba(34,217,92,.22);}
+    .info{margin-top:12px;font-size:14px;color:#bdbdbd;}
+    .features{display:flex;justify-content:space-between;gap:12px;margin-top:44px;text-align:left;}
+    .item{flex:1;min-width:0;}
+    .item h4{color:#ffca2c;font-size:14px;font-weight:800;margin-bottom:6px;}
+    .item p{color:#d0d0d0;font-size:12px;line-height:1.35;}
+    .footer{margin-top:38px;color:#9a9a9a;font-size:13px;font-weight:600;}
+    @media (max-width:480px){.logo{font-size:56px;}.bonus h2{font-size:56px;}.btn{font-size:20px;padding:18px 20px;}}
   </style>
 </head>
+
 <body>
+
   <div class="container">
-    <h1 class="logo">GANAMOS<span>♠</span></h1>
-    <p class="subtitle">ACCESO EXCLUSIVO • CASINO ONLINE - CRUPIERES EN VIVO .NET</p>
 
-    <div class="golden-ticket">
-      <div class="ticket-title">GANAMOS GOLDEN TICKET</div>
-      <div class="bono">BONO 50%</div>
-      <div class="vip">VIP-GOLDEN</div>
+    <div class="badge">🟢 ATENCIÓN 24HS · ARGENTINA</div>
+    <div class="logo">LUCKY CROWN</div>
+    <div class="sub">ENTRETENIMIENTO ONLINE</div>
+
+    <div class="bonus">
+      <div class="gift">🎁</div>
+      <small>BONO DE BIENVENIDA</small>
+      <h2>50% EXTRA</h2>
+      <p>En tu primer depósito · Juegos originales</p>
     </div>
 
-    <p class="message">¡Felicidades! Tu beneficio está activado</p>
+    <a class="btn" id="btn1">📲 CREÁ TU USUARIO GRATIS</a>
+    <div class="info">Sin costo · Registro en minutos · Bono inmediato</div>
 
-    <button onclick="abrirWhatsApp()" class="cta-button">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="28" height="28" alt="WhatsApp">
-      RECLAMAR MI BONO
-    </button>
+    <a class="btn" id="btn2">📲 REGISTRATE GRATIS AHORA</a>
 
-    <div class="footer">
-      +18 | JUEGA CON RESPONSABILIDAD
+    <div class="features">
+      <div class="item"><h4>🔒 SEGURO</h4><p>Plataforma 100% segura</p></div>
+      <div class="item"><h4>⚡ RÁPIDO</h4><p>Depósitos y retiros al instante</p></div>
+      <div class="item"><h4>🎧 SOPORTE 24HS</h4><p>Estamos para ayudarte</p></div>
     </div>
+
+    <div class="footer">+18 · Juega con responsabilidad</div>
   </div>
 
   <script>
-    // Esperar a que el Pixel esté listo
-    function abrirWhatsApp() {
-      // Intentar registrar el evento de forma segura
-      if (typeof fbq !== 'undefined') {
-        fbq('track', 'Contact', {
-          content_name: 'Ganamos - Bono 50%',
-          content_category: 'Lead',
-          value: 1.00,
-          currency: 'USD'
-        });
-        console.log('✅ Evento Contact enviado');
-      } else {
-        console.log('⚠️ Pixel no cargado');
-      }
+    const contactos = [
+        {
+            numero: "5491127872686",
+            mensaje: "Hola! Vi la página de Lucky Crown y quiero crear mi usuario gratis para aprovechar el bonus del 50%."
+        },
+        {
+            numero: "5491127802342",
+            mensaje: "Hola, quiero registrarme en Lucky Crown y saber más sobre los juegos y el bonus."
+        },
+    ];
 
-      const numero = "5491127872686";
-      const mensaje = encodeURIComponent("Hola! Quiero un usuario y reclamar mi Bono 50% Golden Ticket en Ganamos.");
-      window.open(`https://wa.me/${numero}?text=${mensaje}`, '_blank');
+    let contactoActual = contactos[0];
+
+    function actualizarContacto() {
+        contactoActual = contactos[Math.floor(Math.random() * contactos.length)];
+        console.log("Contacto rotado a:", contactoActual.numero);
     }
 
-    // Debug: verificar si el Pixel cargó
-    window.onload = function() {
-      if (typeof fbq !== 'undefined') {
-        console.log('✅ Meta Pixel cargado correctamente');
-      }
-    };
+    function abrirWhatsApp() {
+        const texto = encodeURIComponent(contactoActual.mensaje);
+        const url = `https://wa.me/${contactoActual.numero}?text=${texto}`;
+        
+        window.open(url, '_blank');
+        fbq('track', 'Contact');
+    }
+
+    // Asignar click a ambos botones
+    document.getElementById('btn1').addEventListener('click', abrirWhatsApp);
+    document.getElementById('btn2').addEventListener('click', abrirWhatsApp);
+
+    // Rotación automática cada 5 minutos
+    setInterval(() => {
+        actualizarContacto();
+    }, 5 * 60 * 1000);
+
+    // Rotar también al cargar la página
+    actualizarContacto();
   </script>
+
 </body>
 </html>

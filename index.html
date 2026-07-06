@@ -46,6 +46,7 @@
       margin-bottom: 40px;
     }
 
+    /* Golden Ticket con efecto latido */
     .golden-ticket {
       background: linear-gradient(135deg, #f1c40f, #ffd700);
       color: #1a1a1a;
@@ -55,18 +56,11 @@
       box-shadow: 0 15px 35px rgba(241, 196, 15, 0.4);
       position: relative;
       border: 8px solid #000;
+      animation: pulse 2s infinite;
     }
 
-    .ticket-title {
-      font-size: 15px;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-    .bono {
-      font-size: 52px;
-      font-weight: 900;
-      margin: 15px 0;
-    }
+    .ticket-title { font-size: 15px; font-weight: bold; letter-spacing: 2px; }
+    .bono { font-size: 52px; font-weight: 900; margin: 15px 0; }
     .vip {
       display: inline-block;
       background: #1a1a1a;
@@ -84,12 +78,13 @@
       line-height: 1.4;
     }
 
+    /* Botón con efecto latido + logo WhatsApp */
     .cta-button {
       background: linear-gradient(90deg, #25d366, #20c557);
       color: white;
       font-size: 19px;
       font-weight: 700;
-      padding: 18px 50px;
+      padding: 18px 40px;
       border-radius: 50px;
       border: none;
       width: 100%;
@@ -101,12 +96,19 @@
       gap: 12px;
       box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
       cursor: pointer;
+      animation: pulse 2s infinite;
     }
 
     .footer {
       margin-top: 50px;
       font-size: 13px;
       color: #666;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
@@ -124,7 +126,8 @@
     <p class="message">¡Felicidades! Tu beneficio está activado</p>
 
     <button onclick="abrirWhatsApp()" class="cta-button">
-      <span style="font-size:24px;">💬</span> RECLAMAR MI BONO
+      <span style="font-size:26px;">💬</span> 
+      RECLAMAR MI BONO
     </button>
 
     <div class="footer">

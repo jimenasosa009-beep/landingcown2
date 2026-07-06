@@ -46,7 +46,6 @@
       margin-bottom: 40px;
     }
 
-    /* Golden Ticket con efecto latido */
     .golden-ticket {
       background: linear-gradient(135deg, #f1c40f, #ffd700);
       color: #1a1a1a;
@@ -78,7 +77,6 @@
       line-height: 1.4;
     }
 
-    /* Botón con efecto latido + logo WhatsApp */
     .cta-button {
       background: linear-gradient(90deg, #25d366, #20c557);
       color: white;
@@ -126,7 +124,7 @@
     <p class="message">¡Felicidades! Tu beneficio está activado</p>
 
     <button onclick="abrirWhatsApp()" class="cta-button">
-      <span style="font-size:26px;">💬</span> 
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="28" height="28" alt="WhatsApp">
       RECLAMAR MI BONO
     </button>
 
@@ -136,18 +134,32 @@
   </div>
 
   <script>
+    // Esperar a que el Pixel esté listo
     function abrirWhatsApp() {
-      fbq('track', 'Contact', {
-        content_name: 'Ganamos - Bono 50%',
-        content_category: 'Lead',
-        value: 1.00,
-        currency: 'USD'
-      });
+      // Intentar registrar el evento de forma segura
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'Contact', {
+          content_name: 'Ganamos - Bono 50%',
+          content_category: 'Lead',
+          value: 1.00,
+          currency: 'USD'
+        });
+        console.log('✅ Evento Contact enviado');
+      } else {
+        console.log('⚠️ Pixel no cargado');
+      }
 
       const numero = "5491127872686";
-      const mensaje = encodeURIComponent("Hola! Quiero reclamar mi Bono 50% Golden Ticket en Ganamos.");
+      const mensaje = encodeURIComponent("Hola! Quiero un usuario y reclamar mi Bono 50% Golden Ticket en Ganamos.");
       window.open(`https://wa.me/${numero}?text=${mensaje}`, '_blank');
     }
+
+    // Debug: verificar si el Pixel cargó
+    window.onload = function() {
+      if (typeof fbq !== 'undefined') {
+        console.log('✅ Meta Pixel cargado correctamente');
+      }
+    };
   </script>
 </body>
 </html>
